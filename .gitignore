@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.python-version-cache
+*.egg-info/
+
+# Data — too large for git
+data/audio/*.mp3
+data/audio/*.wav
+data/audio/*.ogg
+data/audio/*.m4a
+data/audio/*.flac
+data/refs/*.jpg
+data/refs/*.jpeg
+data/refs/*.png
+data/outputs/*.png
+data/outputs/*.jpg
+
+# Keep folder structure
+!data/audio/.gitkeep
+!data/refs/.gitkeep
+!data/outputs/.gitkeep
+
+# Models cache
+.cache/
+*.bin
+*.safetensors
+
+# IDE
+.vscode/
+.idea/
+.DS_Store

@@ -1,0 +1,26 @@
+[project]
+name = "satie-cross-modal"
+version = "0.1.0"
+description = "Cross-modal AI pipeline translating Erik Satie piano works into fin-de-siecle Parisian visual art"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.1",
+    "diffusers>=0.30,<0.32",
+    "transformers>=4.44",
+    "accelerate>=0.33",
+    "peft>=0.12",
+    "safetensors>=0.4",
+    "librosa>=0.11",
+    "numpy>=2.0",
+    "soundfile>=0.12",
+    "pillow>=10",
+    "ftfy>=6",
+    "matplotlib>=3.8",
+]
+
+[project.scripts]
+satie-generate = "src.generate:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
