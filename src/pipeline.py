@@ -20,10 +20,15 @@ def load_reference_images(refs_dir: Path, target_size: int = 512) -> dict[str, I
 
 
 # Per-piece reference image groups (filename stems, lowercase)
+# Reassigned to match new SUBJECT_PHRASES directions:
+# - Gymnopédie now targets Khnopff/Delville drama → Symbolist refs (Moreau, Redon, Whistler)
+# - Gnossienne now targets Puvis lakeside → Puvis-heavy refs
+# - Vexations targets empty corridor → minimal refs (Whistler atmosphere only) so
+#   IP-Adapter doesn't smuggle figures back into the empty room.
 REF_GROUPS = {
-    'gymnopedie_1': ['puvis_sacred_grove', 'puvis_summer', 'redon_closed_eyes'],
-    'gnossienne_1': ['redon_closed_eyes', 'moreau_galatea', 'puvis_summer'],
-    'vexations':    ['whistler_nocturne', 'puvis_sacred_grove', 'redon_closed_eyes'],
+    'gymnopedie_1': ['moreau_galatea', 'redon_closed_eyes', 'whistler_nocturne'],
+    'gnossienne_1': ['puvis_sacred_grove', 'puvis_summer', 'redon_closed_eyes'],
+    'vexations':    ['whistler_nocturne', 'redon_closed_eyes'],
 }
 
 
