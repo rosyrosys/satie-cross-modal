@@ -17,23 +17,25 @@ PERIOD_ANCHOR = 'fin-de-siecle Parisian Symbolist painting, 1890s'
 # Per-piece subject phrases — visual ideas, editorial choices
 SUBJECT_PHRASES = {
     'gymnopedie_1': (
-        'three pale draped figures only, sparse procession across ochre plane, '
-        'frieze in the manner of Puvis de Chavannes'
+        'three veiled hooded figures in profile procession, vast plain marked '
+        'with geometric grid pattern, golden Symbolist sunset, distant obelisk silhouette, '
+        'in the manner of Khnopff and Delville'
     ),
     'gnossienne_1': (
-        'single robed figure in 1890s candlelit oriental corridor, '
-        'dusty mosaic tile, arched openings, ceremonial mystery'
+        'three pale draped figures in solemn procession beside still lakeside, '
+        'hooded contemplation, earth-tone palette, in the manner of Puvis de Chavannes'
     ),
     'vexations': (
-        'completely empty silent room, no people, deserted interior, '
-        'dim grey-blue monochrome, abandoned, in the manner of Whistler nocturnes'
+        'endless wood-paneled corridor in fin-de-siecle Parisian interior, '
+        'deep one-point perspective, vanishing point, sunlit boiserie, '
+        'dim grey monochrome chiaroscuro, no people, painterly oil'
     ),
 }
 
 # Biographical anchors — the moment in Satie's life the piece emerged from (compressed)
 BIOGRAPHICAL_ANCHORS = {
     'gymnopedie_1': '1888, pre-romantic bohemian loneliness',
-    'gnossienne_1': '1890, imagined Orient, intensified solitude',
+    'gnossienne_1': '1890, modal solitude, contemplation before love',
     'vexations':    '1893, mourning Valadon departure, obsessive grief',
 }
 
@@ -47,7 +49,8 @@ NEGATIVE = (
 
 # Per-piece extra negatives prepended to the global NEGATIVE.
 PIECE_NEGATIVES = {
-    'vexations': 'people, figures, crowd, cafe, conversation, multiple figures, ',
+    'vexations': 'people, figures, crowd, cafe, conversation, multiple figures, '
+                 'furniture, table, chair, painting on wall, ',
 }
 
 
