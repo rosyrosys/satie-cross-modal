@@ -5,6 +5,9 @@ a Satie audio profile, follow the rules that fire, and understand why a particul
 was generated. See paper §4.6 for methodology.
 
 Editing this file is the primary way to change the system's interpretive choices.
+
+Phrases are compressed to fit within CLIP's 77-token budget when concatenated with the
+period/subject/biographical components.
 """
 
 from .audio import percentile
@@ -20,32 +23,32 @@ def lexical_bridge(low_level: dict) -> str:
 
     # Palette — driven by spectral centroid (perceived brightness)
     if cent_p < 0.3:
-        chunks.append('muted palette of dusty ochres, silvered blues, and greyed greens')
+        chunks.append('muted ochres, silvered blues')
     elif cent_p < 0.6:
-        chunks.append('warm palette of gaslight gold, deep maroon, and aged ivory')
+        chunks.append('warm gaslight gold, aged ivory')
     else:
-        chunks.append('luminous palette with bright contour lines and warm highlights')
+        chunks.append('luminous bright contour, warm highlights')
 
     # Composition rhythm — driven by tempo
     if tempo_p < 0.3:
-        chunks.append('quiet horizontal composition, slow visual rhythm, sparsely populated')
+        chunks.append('quiet horizontal, slow rhythm, sparse')
     elif tempo_p < 0.6:
-        chunks.append('balanced composition with gentle oscillating rhythm')
+        chunks.append('balanced gentle oscillation')
     else:
-        chunks.append('animated composition, rhythmic colour blocks, restless surface')
+        chunks.append('animated rhythmic, restless surface')
 
     # Surface treatment — driven by dynamic range
     if dyn_p < 0.3:
-        chunks.append('flat surface treatment in the manner of a fresco')
+        chunks.append('flat fresco surface')
     else:
-        chunks.append('layered painterly surface with subtle textural inflection')
+        chunks.append('layered painterly surface')
 
     # Mood — driven by RMS (overall energy)
     if rms_p < 0.3:
-        chunks.append('an air of ceremonial stillness, evening light')
+        chunks.append('ceremonial stillness, evening light')
     elif rms_p < 0.7:
-        chunks.append('a soft interior mood, half-lit')
+        chunks.append('soft half-lit interior')
     else:
-        chunks.append('a charged atmosphere, vivid presence')
+        chunks.append('charged vivid presence')
 
     return ', '.join(chunks)

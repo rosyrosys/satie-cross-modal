@@ -12,7 +12,7 @@ from pathlib import Path
 import torch
 
 from .audio import find_satie_audio, low_level_features, CLAPEncoder
-from .prompts import build_prompt, NEGATIVE
+from .prompts import build_prompt, build_negative
 from .pipeline import build_pipeline, load_reference_images, REF_GROUPS
 
 
@@ -82,7 +82,7 @@ def main() -> int:
     for name in pieces:
         kwargs = dict(
             prompt=prompts[name],
-            negative_prompt=NEGATIVE,
+            negative_prompt=build_negative(name),
             generator=torch.Generator(device=device).manual_seed(SEEDS.get(name, 0)),
             num_inference_steps=args.steps,
             guidance_scale=args.guidance_scale,
