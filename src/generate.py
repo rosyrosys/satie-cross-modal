@@ -92,7 +92,8 @@ def main() -> int:
         if use_ip_adapter:
             piece_refs = [refs[k.lower()] for k in REF_GROUPS.get(name, []) if k.lower() in refs]
             if piece_refs:
-                kwargs['ip_adapter_image'] = piece_refs
+                # diffusers expects: outer list = num_ip_adapters (1 here), inner = images for that adapter
+                kwargs['ip_adapter_image'] = [piece_refs]
 
         print(f'>> generating {name}...')
         img = pipe(**kwargs).images[0]
