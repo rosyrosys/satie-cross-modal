@@ -19,6 +19,15 @@ from .pipeline import build_pipeline, load_reference_images, REF_GROUPS
 # Per-piece random seeds (composition years, for reproducibility)
 SEEDS = {'gymnopedie_1': 1888, 'gnossienne_1': 1890, 'vexations': 1893}
 
+# Per-piece IP-Adapter strength. Higher = stronger reference-image style grounding,
+# but weakens prompt fidelity. Vexations is kept low so the "no people" guard
+# in the prompt isn't overpowered by visual style cues from reference figures.
+PER_PIECE_IP_SCALE = {
+    'gymnopedie_1': 0.70,  # strong Puvis grounding
+    'gnossienne_1': 0.50,  # balanced
+    'vexations':    0.25,  # minimal — preserve "empty room" concept
+}
+
 
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -94,8 +103,10 @@ def main() -> int:
             if piece_refs:
                 # diffusers expects: outer list = num_ip_adapters (1 here), inner = images for that adapter
                 kwargs['ip_adapter_image'] = [piece_refs]
+                # Per-piece IP-Adapter strength (overrides the pipeline-level default)
+                pipe.set_ip_adapter_scale(PER_PIECE_IP_SCALE.get(name, args.ip_adapter_scale))
 
-        print(f'>> generating {name}...')
+        print(f'>> generating {name}... (ip_scale={PER_PIECE_IP_SCALE.get(name, args.ip_adapter_scale) if use_ip_adapter else "off"})')
         img = pipe(**kwargs).images[0]
         out = args.out_dir / f'{name}.png'
         img.save(out)
