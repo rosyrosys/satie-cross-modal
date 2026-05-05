@@ -54,7 +54,10 @@ def build_pipeline(
     )
 
     if memory_efficient:
-        pipe.enable_sequential_cpu_offload()
+        # model_cpu_offload (whole-module) is more compatible with IP-Adapter than
+        # sequential_cpu_offload (per-layer), which leaves the CLIP image encoder
+        # in a mixed cuda/meta state and breaks torch.cat in vision embeddings.
+        pipe.enable_model_cpu_offload()
         pipe.enable_vae_slicing()
         pipe.enable_vae_tiling()
     else:
