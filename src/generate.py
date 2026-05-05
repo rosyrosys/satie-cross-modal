@@ -32,8 +32,8 @@ def parse_args() -> argparse.Namespace:
     p.add_argument('--width', type=int, default=768)
     p.add_argument('--height', type=int, default=768)
     p.add_argument('--no-ip-adapter', action='store_true', help='Disable IP-Adapter even if refs are present')
-    p.add_argument('--memory-efficient', action='store_true', default=True,
-                   help='Sequential CPU offload (for 12-16GB GPUs, default on)')
+    p.add_argument('--memory-efficient', action=argparse.BooleanOptionalAction, default=False,
+                   help='CPU offload — only needed if VRAM < 12GB. Off by default on T4 (15GB) for IP-Adapter compat.')
     return p.parse_args()
 
 
