@@ -53,6 +53,12 @@ def build_pipeline(
         sdxl_model, vae=vae, torch_dtype=dtype, variant='fp16', use_safetensors=True
     )
 
+    # Load IP-Adapter BEFORE enabling offload so its image_encoder gets registered
+    # in the offload hook chain (otherwise its weights stay on CPU while inputs go to CUDA).
+    if use_ip_adapter:
+        pipe.load_ip_adapter(ip_adapter_repo, subfolder='sdxl_models', weight_name=ip_adapter_weight)
+        pipe.set_ip_adapter_scale(ip_adapter_scale)
+
     if memory_efficient:
         # model_cpu_offload (whole-module) is more compatible with IP-Adapter than
         # sequential_cpu_offload (per-layer), which leaves the CLIP image encoder
@@ -62,9 +68,5 @@ def build_pipeline(
         pipe.enable_vae_tiling()
     else:
         pipe = pipe.to('cuda')
-
-    if use_ip_adapter:
-        pipe.load_ip_adapter(ip_adapter_repo, subfolder='sdxl_models', weight_name=ip_adapter_weight)
-        pipe.set_ip_adapter_scale(ip_adapter_scale)
 
     return pipe
