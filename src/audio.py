@@ -68,7 +68,7 @@ class CLAPEncoder:
     @torch.no_grad()
     def embed(self, audio_path: Path, sr: int = 48000, duration: float = 30.0) -> np.ndarray:
         y, _ = librosa.load(str(audio_path), sr=sr, mono=True, duration=duration)
-        inputs = self.proc(audios=y, sampling_rate=sr, return_tensors='pt').to(self.device)
+        inputs = self.proc(audio=y, sampling_rate=sr, return_tensors='pt').to(self.device)
         e = self.model.get_audio_features(**inputs).squeeze(0).float().cpu().numpy()
         return e / (np.linalg.norm(e) + 1e-8)
 
