@@ -69,7 +69,15 @@ class CLAPEncoder:
     def embed(self, audio_path: Path, sr: int = 48000, duration: float = 30.0) -> np.ndarray:
         y, _ = librosa.load(str(audio_path), sr=sr, mono=True, duration=duration)
         inputs = self.proc(audio=y, sampling_rate=sr, return_tensors='pt').to(self.device)
-        e = self.model.get_audio_features(**inputs).squeeze(0).float().cpu().numpy()
+        out = self.model.get_audio_features(**inputs)
+        # transformers >= 4.45 may return BaseModelOutputWithPooling instead of a tensor
+        if hasattr(out, 'pooler_output'):
+            feat = out.pooler_output
+        elif hasattr(out, 'last_hidden_state'):
+            feat = out.last_hidden_state.mean(dim=1)
+        else:
+            feat = out
+        e = feat.squeeze(0).float().cpu().numpy()
         return e / (np.linalg.norm(e) + 1e-8)
 
 
