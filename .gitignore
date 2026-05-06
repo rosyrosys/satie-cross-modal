@@ -31,3 +31,7 @@ data/outputs/*.jpg
 .vscode/
 .idea/
 .DS_Store
+
+# Paper drafts — kept locally, never tracked
+docs/*.docx
+docs/*.pdf
