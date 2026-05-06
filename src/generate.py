@@ -20,16 +20,14 @@ from .pipeline import build_pipeline, load_reference_images, REF_GROUPS
 SEEDS = {'gymnopedie_1': 1888, 'gnossienne_1': 1890, 'vexations': 1893}
 
 # Per-piece IP-Adapter strength. Higher = stronger reference-image style grounding,
-# but weakens prompt fidelity. Tuned for the musicologically grounded SUBJECT_PHRASES:
-# - Gymnopédie aims at ancient Greek gymnopaidiai ritual stillness; Puvis classical
-#   refs match the static frieze quality, allow stronger.
-# - Gnossienne aims at Rose-Croix mystical / gnostic chamber; no exact refs in our
-#   small corpus, keep low so the prompt drives the esoteric direction.
-# - Vexations aims at infinite spatial repetition; keep low so prompt's "no people"
-#   and corridor geometry survive the visual conditioning.
+# but weakens prompt fidelity. Tuned for the current SUBJECT_PHRASES directions:
+# - Gymnopédie aims at Khnopff/Delville drama (sunset+grid+obelisk) — refs are
+#   Puvis-leaning so we keep scale modest, letting prompt drive the new direction.
+# - Gnossienne aims at Puvis 3-figures lakeside — refs match well, allow stronger.
+# - Vexations aims at empty corridor — no refs match, keep low so prompt dominates.
 PER_PIECE_IP_SCALE = {
-    'gymnopedie_1': 0.55,
-    'gnossienne_1': 0.40,
+    'gymnopedie_1': 0.40,
+    'gnossienne_1': 0.60,
     'vexations':    0.30,
 }
 
