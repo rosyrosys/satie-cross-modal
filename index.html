@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sonorous Brushstrokes, Satie Cross-Modal AI</title>
+<meta name="description" content="A cross-modal AI framework that translates Erik Satie's piano works into fin-de-siècle Parisian visual artworks, anchored in the composer's biographical solitude.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <p class="kicker">Companion site</p>
+    <h1>Sonorous Brushstrokes</h1>
+    <p class="subtitle">A Cross-Modal AI Framework for Translating Erik Satie's Fin-de-Siècle Parisian Solitude into Synaesthetic Visual Art</p>
+    <p class="byline">Eun Ji Park · Seoul National University · 2026</p>
+    <nav class="hero-nav">
+      <a href="#abstract">Abstract</a>
+      <a href="#pieces">Case Studies</a>
+      <a href="#method">Method</a>
+      <a href="#code">Code</a>
+      <a href="#cite">Cite</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section id="abstract" class="section">
+  <h2>Abstract</h2>
+  <p>This article proposes a cross-modal AI framework that translates piano works by Erik Satie into period-faithful visual artworks. The framework anchors its interpretive choices in Satie's biographical solitude, twenty-seven years of monastic life in Arcueil, his only documented love affair with Suzanne Valadon in 1893, the unsent letters and hidden compositions discovered after his death, treating this biographical anchor as a curatorial input alongside the audio. The architecture integrates contrastive audio-language embeddings, low-level acoustic descriptors, and Stable Diffusion XL with IP-Adapter conditioned through curated fin-de-siècle Parisian visual references. Three case studies cover Gymnopédie No. 1, Gnossienne No. 1, and Vexations, spanning the affair's emotional arc. The article frames AI as interpretive collaborator rather than substitutive imitator.</p>
+</section>
+
+<section id="pieces" class="section section-pieces">
+  <h2>Three Case Studies</h2>
+  <p class="section-intro">Each piece is shown alongside its biographical anchor, the prompt that drove generation, the IP-Adapter reference set, and an authorial reading of the resulting image.</p>
+
+  <article class="piece">
+    <div class="piece-image">
+      <img src="images/gymnopedie_1.png" alt="AI-generated visualisation of Gymnopédie No. 1: three veiled hooded figures in profile procession across a vast plain under a luminous Symbolist sunset, in the manner of Khnopff and Delville." loading="lazy">
+      <p class="caption"><strong>Fig. 1.</strong> Gymnopédie No. 1 (1888). Cross-modal pipeline output, IP-Adapter scale 0.40.</p>
+      <audio controls preload="none" class="piece-audio">
+        <source src="audio/gymnopedie_1.mp3" type="audio/mpeg">
+        Your browser does not support audio playback.
+      </audio>
+    </div>
+    <div class="piece-text">
+      <h3>Gymnopédie No. 1 <span class="year">1888</span></h3>
+      <dl class="meta">
+        <dt>Biographical anchor</dt><dd>1888, pre-romantic bohemian loneliness</dd>
+        <dt>Visual subject</dt><dd>three veiled hooded figures in profile procession, vast plain marked with geometric grid pattern, golden Symbolist sunset, distant obelisk silhouette</dd>
+        <dt>Manner of</dt><dd>Khnopff, Delville</dd>
+        <dt>IP-Adapter refs</dt><dd>Moreau · Galatée · Redon · Les Yeux clos · Whistler · Nocturne in Blue and Silver</dd>
+        <dt>IP-Adapter scale</dt><dd>0.40</dd>
+        <dt>Seed</dt><dd>1888 (composition year)</dd>
+      </dl>
+      <p class="reading">The piece precedes the Valadon affair by five years, in the Auberge du Clou years, when Satie was already living the eccentric ritual life but had not yet experienced the brief disruption of returned attention that 1893 would bring. The image's frieze-like profile procession reads as an emblem of pre-affair loneliness, a body of three rather than two, no relational interruption yet possible.</p>
+    </div>
+  </article>
+
+  <article class="piece">
+    <div class="piece-image">
+      <img src="images/gnossienne_1.png" alt="AI-generated visualisation of Gnossienne No. 1: three pale draped figures in solemn procession beside a still lake, in the manner of Puvis de Chavannes." loading="lazy">
+      <p class="caption"><strong>Fig. 2.</strong> Gnossienne No. 1 (1890). Cross-modal pipeline output, IP-Adapter scale 0.60.</p>
+      <audio controls preload="none" class="piece-audio">
+        <source src="audio/gnossienne_1.mp3" type="audio/mpeg">
+        Your browser does not support audio playback.
+      </audio>
+    </div>
+    <div class="piece-text">
+      <h3>Gnossienne No. 1 <span class="year">1890</span></h3>
+      <dl class="meta">
+        <dt>Biographical anchor</dt><dd>1890, modal solitude, contemplation before love</dd>
+        <dt>Visual subject</dt><dd>three pale draped figures in solemn procession beside still lakeside, hooded contemplation, earth-tone palette</dd>
+        <dt>Manner of</dt><dd>Puvis de Chavannes</dd>
+        <dt>IP-Adapter refs</dt><dd>Puvis · Le Bois sacré · Puvis · L'Été · Redon · Les Yeux clos</dd>
+        <dt>IP-Adapter scale</dt><dd>0.60</dd>
+        <dt>Seed</dt><dd>1890</dd>
+      </dl>
+      <p class="reading">Composed in the year between the first Gymnopédies and the Rose+Croix commissions, a period of intensified solitude during which Satie was developing the harmonic vocabulary that Valadon would, three years later, identify as the voice she had been listening to. The visual anchor was deliberately shifted away from the Orientalist framing of the v3 manuscript: on inspection of how IP-Adapter image generation imports Orientalist tropes, "imagined East" was rephrased as "modal solitude, contemplation before love."</p>
+    </div>
+  </article>
+
+  <article class="piece">
+    <div class="piece-image">
+      <img src="images/vexations.png" alt="AI-generated visualisation of Vexations: an empty wood-paneled corridor in a fin-de-siècle Parisian interior, deep one-point perspective with sunlit boiserie, no people." loading="lazy">
+      <p class="caption"><strong>Fig. 3.</strong> Vexations (1893). Cross-modal pipeline output, IP-Adapter scale 0.30.</p>
+      <audio controls preload="none" class="piece-audio">
+        <source src="audio/vexations.mp3" type="audio/mpeg">
+        Your browser does not support audio playback.
+      </audio>
+      <p class="caption" style="font-size:0.78rem; opacity:0.7;">Note: a single iteration; the score asks for 840 repetitions over ~20 hours.</p>
+    </div>
+    <div class="piece-text">
+      <h3>Vexations <span class="year">1893</span></h3>
+      <dl class="meta">
+        <dt>Biographical anchor</dt><dd>1893, mourning Valadon departure, obsessive grief</dd>
+        <dt>Visual subject</dt><dd>endless wood-paneled corridor, deep one-point perspective, vanishing point, sunlit boiserie, dim grey monochrome chiaroscuro, no people</dd>
+        <dt>Manner of</dt><dd>Whistler nocturnes (atmospheric reference)</dd>
+        <dt>IP-Adapter refs</dt><dd>Whistler · Nocturne in Blue and Silver · Redon · Les Yeux clos</dd>
+        <dt>IP-Adapter scale</dt><dd>0.30 (low, preserve "no people" prompt)</dd>
+        <dt>Seed</dt><dd>1893</dd>
+      </dl>
+      <p class="reading">The score is a single page of fewer than two minutes, accompanied by Satie's instruction to repeat it 840 times in the deepest silence and serious immobilities. The work was hidden in his Arcueil room for thirty-two years; it was discovered, alongside the unsent <em>Bonjour Biqui</em> song and the bundle of unsent letters to Valadon, only in 1925 after his death. The pipeline answers the music's temporal repetition (840×) with an analogous spatial repetition (the boiserie corridor receding to a vanishing point), substituting space for the time the music asks for. We treat Vexations not as a single still but as the paradigmatic still: the corridor is one frame of a sequence that, in principle, could extend through twenty hours.</p>
+    </div>
+  </article>
+</section>
+
+<section id="method" class="section">
+  <h2>Method Highlights</h2>
+
+  <div class="method-grid">
+    <div class="method-card">
+      <h3>Biographical anchoring</h3>
+      <p>Each piece carries a piece-specific editorial phrase that names the moment of Satie's life from which it emerged. These phrases are released with the source code so that other research groups can revise, contest, or replace them by editing a single dictionary in <code>src/prompts.py</code>.</p>
+    </div>
+
+    <div class="method-card">
+      <h3>Per-piece IP-Adapter scale</h3>
+      <p>The IP-Adapter scale is set per piece between 0.30 and 0.70, higher when the references closely match the target visual idiom (Gnossienne with Puvis-heavy refs at 0.60), lower when the prompt drives a direction not represented in the references (Vexations targeting an empty corridor at 0.30).</p>
+    </div>
+
+    <div class="method-card">
+      <h3>Lexical bridge</h3>
+      <p>A handcrafted dictionary translates audio descriptors into image-prompt vocabulary. Four perceptual dimensions (palette, rhythm, surface, mood) × three percentile bands = twelve canonical phrases. Auditable: an expert can predict what phrase any given audio profile produces.</p>
+    </div>
+
+    <div class="method-card">
+      <h3>CLIP token discipline</h3>
+      <p>SDXL's CLIP encoder truncates at 77 tokens. All four prompt components (subject, biographical, period, mood) are aggressively compressed to fit. Earlier longer formulations were silently truncated, with the result that biographical material was lost from the prompt.</p>
+    </div>
+  </div>
+</section>
+
+<section id="findings" class="section">
+  <h2>What the Case Studies Show</h2>
+  <ol class="findings">
+    <li><strong>The IP-Adapter reference set is the dominant source of stylistic legibility.</strong> When the prompt asks for a Khnopff/Delville scene but the reference set is Puvis-leaning, the image still resolves toward Puvis. The per-piece scale is therefore the principal lever balancing visual style grounding against prompt fidelity.</li>
+    <li><strong>Biographical anchoring measurably alters the image's interpretive valence.</strong> The Gnossienne image, which under the v3 anchor's "imagined East" framing tended to import Orientalist tropes, reorganises around contemplative pre-romantic solitude when the anchor is rephrased as "modal solitude, contemplation before love", a swap that costs four tokens and changes the Salonist legibility entirely.</li>
+    <li><strong>The system handles temporally constituted works (Vexations) by displacement rather than by representation.</strong> A piece whose meaning is constituted by 840 repetitions over twenty hours cannot be illustrated in a single still; the pipeline substitutes an analogous spatial repetition (boiserie corridor receding to a vanishing point) for the temporal repetition the music asks for.</li>
+  </ol>
+</section>
+
+<section id="code" class="section">
+  <h2>Code, Data, &amp; Reproducibility</h2>
+  <div class="code-grid">
+    <div class="code-card">
+      <h3>Source code</h3>
+      <p>Open-source pipeline implementation. Includes <code>src/audio.py</code>, <code>src/bridge.py</code>, <code>src/prompts.py</code>, <code>src/pipeline.py</code>, <code>src/generate.py</code>.</p>
+      <p><a class="btn" href="https://github.com/rosyrosys/satie-cross-modal" target="_blank" rel="noopener">View on GitHub →</a></p>
+    </div>
+    <div class="code-card">
+      <h3>Reproduce in Colab</h3>
+      <p>Colab notebook mounts Google Drive (audio + reference images), clones the repo, installs dependencies, and renders the three pieces with fixed seeds (1888, 1890, 1893).</p>
+      <p><a class="btn" href="https://colab.research.google.com/github/rosyrosys/satie-cross-modal/blob/main/notebooks/colab_run.ipynb" target="_blank" rel="noopener">Open in Colab →</a></p>
+    </div>
+    <div class="code-card">
+      <h3>Archive (DOI)</h3>
+      <p>A versioned snapshot of the code at submission will be archived on Zenodo. The DOI will be added here at the time of paper submission.</p>
+      <p class="placeholder"><em>DOI: <code>pending</code></em></p>
+    </div>
+  </div>
+</section>
+
+<section id="cite" class="section">
+  <h2>Citation</h2>
+  <p>If you use this work, please cite:</p>
+  <pre class="bibtex">@article{park2026sonorous,
+  author    = {Park, Eun Ji},
+  title     = {Sonorous Brushstrokes: A Cross-Modal AI Framework for
+               Translating Erik Satie's Fin-de-Si{\`e}cle Parisian
+               Solitude into Synaesthetic Visual Art},
+  journal   = {Leonardo},
+  year      = {2026},
+  publisher = {MIT Press},
+  note      = {Companion site: https://rosyrosys.github.io/satie-cross-modal/}
+}</pre>
+</section>
+
+<section id="about" class="section">
+  <h2>About</h2>
+  <div class="about-grid">
+    <div>
+      <h3>Author</h3>
+      <p><strong>Eun Ji Park</strong> is a lecturer at Seoul National University. She studied music at institutions in Paris, France, and New York. She holds a master's in music from Korea, a master's in engineering from KAIST, and a PhD in musicology from Seoul National University, where she graduated as valedictorian.</p>
+      <p><a href="https://music-eunjipark.com/" target="_blank" rel="noopener">music-eunjipark.com</a> · <a href="https://orcid.org/0000-0001-7699-867X" target="_blank" rel="noopener">ORCID 0000-0001-7699-867X</a> · <a href="mailto:dr.rosyrosys@gmail.com">dr.rosyrosys@gmail.com</a></p>
+    </div>
+    <div>
+      <h3>Acknowledgements</h3>
+      <p>The visual reference corpus draws on public-domain works hosted by Wikimedia Commons. Reference images include works by Pierre Puvis de Chavannes, Odilon Redon, Gustave Moreau, James McNeill Whistler, Pierre Bonnard, Jules Chéret, and Henri de Toulouse-Lautrec.</p>
+      <p>The pipeline builds on Stable Diffusion XL (Rombach et al., 2022), IP-Adapter (Ye et al., 2023), and CLAP (Elizalde et al., 2023).</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>Last updated: May 2026 · <a href="https://github.com/rosyrosys/satie-cross-modal">GitHub</a></p>
+</footer>
+
+</body>
+</html>
