@@ -32,6 +32,18 @@ data/outputs/*.jpg
 .idea/
 .DS_Store
 
-# Paper drafts — kept locally, never tracked
+# Paper drafts — kept locally, never tracked (private until publication)
 docs/*.docx
+docs/*.doc
+docs/*.htm
+docs/*.html
 docs/*.pdf
+
+# Local-only build sources containing full paper text (not for public repo)
+notebooks/v4_revisions.ps1
+notebooks/v4_leonardo_overlay.ps1
+notebooks/v3_en_text.txt
+notebooks/v3_ko_text.txt
+
+# Local server config
+.claude/
