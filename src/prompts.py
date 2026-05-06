@@ -17,26 +17,28 @@ PERIOD_ANCHOR = 'fin-de-siecle Parisian Symbolist painting, 1890s'
 # Per-piece subject phrases — visual ideas, editorial choices
 SUBJECT_PHRASES = {
     'gymnopedie_1': (
-        'three veiled hooded figures in profile procession, vast plain marked '
-        'with geometric grid pattern, golden Symbolist sunset, distant obelisk silhouette, '
-        'in the manner of Khnopff and Delville'
+        'ancient Greek gymnopaidiai ceremonial procession, three pale draped youths '
+        'in slow ritual movement, frieze-like composition, vast horizon plain, '
+        'golden silent dawn, distant Doric temple silhouette, Symbolist stillness'
     ),
     'gnossienne_1': (
-        'three pale draped figures in solemn procession beside still lakeside, '
-        'hooded contemplation, earth-tone palette, in the manner of Puvis de Chavannes'
+        'single hooded figure in candlelit Symbolist temple chamber, mystical '
+        'Rose-Croix atmosphere, gnostic contemplation, time dissolving, '
+        'esoteric stillness, in the manner of Carlos Schwabe and Felicien Rops'
     ),
     'vexations': (
-        'endless wood-paneled corridor in fin-de-siecle Parisian interior, '
-        'deep one-point perspective, vanishing point, sunlit boiserie, '
-        'dim grey monochrome chiaroscuro, no people, painterly oil'
+        'infinite wood-paneled corridor in fin-de-siecle Parisian interior, '
+        'vanishing perspective receding into infinity, endlessly repeated '
+        'boiserie panels, time dissolving into spatial repetition, dim grey '
+        'monochrome chiaroscuro, no people, in the manner of Whistler nocturnes'
     ),
 }
 
 # Biographical anchors — the moment in Satie's life the piece emerged from (compressed)
 BIOGRAPHICAL_ANCHORS = {
-    'gymnopedie_1': '1888, pre-romantic bohemian loneliness',
-    'gnossienne_1': '1890, modal solitude, contemplation before love',
-    'vexations':    '1893, mourning Valadon departure, obsessive grief',
+    'gymnopedie_1': '1888, ancient ritual stillness, pre-romantic monastic solitude',
+    'gnossienne_1': '1890, Rose-Croix mystical solitude, gnostic time dissolution',
+    'vexations':    '1893, obsessive repetition as time dissolution, post-Valadon mourning',
 }
 
 NEGATIVE = (
