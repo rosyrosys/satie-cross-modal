@@ -1,0 +1,47 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using these metadata."
+title: "satie-cross-modal: Cross-Modal AI Pipeline Translating Erik Satie's Piano Works into Fin-de-Siècle Parisian Visual Art"
+abstract: >-
+  A cross-modal AI framework that translates piano works by Erik Satie into
+  period-faithful visual artworks. Combines CLAP audio embeddings, low-level
+  acoustic descriptors via librosa, a handcrafted lexical bridge over four
+  perceptual dimensions (palette, rhythm, surface, mood), and Stable
+  Diffusion XL with IP-Adapter conditioned on curated fin-de-siècle
+  Parisian visual references. Each piece is anchored to an editorial
+  biographical phrase that situates the score within a moment of the
+  composer's life. Released as the computational companion to the paper
+  "Sonorous Brushstrokes".
+type: software
+authors:
+  - family-names: Park
+    given-names: Eun Ji
+    orcid: "https://orcid.org/0000-0001-7699-867X"
+    affiliation: "Seoul National University, Department of Musicology"
+    email: dr.rosyrosys@gmail.com
+repository-code: "https://github.com/rosyrosys/satie-cross-modal"
+url: "https://rosyrosys.github.io/satie-cross-modal/"
+keywords:
+  - cross-modal generation
+  - AI art
+  - Erik Satie
+  - fin-de-siècle Paris
+  - diffusion models
+  - digital creativity
+  - Stable Diffusion XL
+  - IP-Adapter
+  - synaesthesia
+  - musicology
+license: MIT
+version: 1.0.0
+date-released: "2026-05-08"
+preferred-citation:
+  type: software
+  title: "satie-cross-modal: Cross-Modal AI Pipeline Translating Erik Satie's Piano Works into Fin-de-Siècle Parisian Visual Art"
+  authors:
+    - family-names: Park
+      given-names: Eun Ji
+      orcid: "https://orcid.org/0000-0001-7699-867X"
+      affiliation: "Seoul National University, Department of Musicology"
+  year: 2026
+  version: 1.0.0
+  url: "https://github.com/rosyrosys/satie-cross-modal"

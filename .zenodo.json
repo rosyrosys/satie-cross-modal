@@ -1,0 +1,37 @@
+{
+  "title": "satie-cross-modal: Cross-Modal AI Pipeline Translating Erik Satie's Piano Works into Fin-de-Siècle Parisian Visual Art",
+  "description": "<p>A cross-modal AI framework that translates piano works by Erik Satie into period-faithful visual artworks. Combines CLAP audio embeddings, low-level acoustic descriptors via librosa, a handcrafted lexical bridge over four perceptual dimensions (palette, rhythm, surface, mood), and Stable Diffusion XL with IP-Adapter conditioned on curated fin-de-siècle Parisian visual references. Each piece is anchored to an editorial biographical phrase that situates the score within a moment of the composer's life. Released as the computational companion to the paper <em>Sonorous Brushstrokes</em>.</p>",
+  "creators": [
+    {
+      "name": "Park, Eun Ji",
+      "affiliation": "Seoul National University, Department of Musicology",
+      "orcid": "0000-0001-7699-867X"
+    }
+  ],
+  "upload_type": "software",
+  "license": "MIT",
+  "access_right": "open",
+  "language": "eng",
+  "keywords": [
+    "cross-modal generation",
+    "AI art",
+    "Erik Satie",
+    "fin-de-siècle Paris",
+    "diffusion models",
+    "digital creativity",
+    "Stable Diffusion XL",
+    "IP-Adapter",
+    "synaesthesia",
+    "musicology"
+  ],
+  "communities": [
+    {"identifier": "digital-humanities"}
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://rosyrosys.github.io/satie-cross-modal/",
+      "relation": "isDocumentedBy",
+      "resource_type": "publication-other"
+    }
+  ]
+}

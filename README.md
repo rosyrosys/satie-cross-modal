@@ -72,3 +72,11 @@ data/outputs/    생성 결과 PNG (gitignore)
 - 논문 영문판: `docs/Sonorous_Brushstrokes_v3_EN.docx`
 - 논문 한국어판: `docs/Sonorous_Brushstrokes_v3_KO.docx`
 - 사티–발라동 1893 일대기 PDF: `docs/Bonjour_Biqui.pdf`
+
+## 인용
+
+이 코드를 사용하시면 `CITATION.cff`의 메타데이터로 인용해 주세요. Zenodo로 archive된 release가 있다면 그쪽 DOI를 우선 인용합니다.
+
+## 라이선스
+
+코드는 [MIT 라이선스](LICENSE) 하에 배포됩니다.
