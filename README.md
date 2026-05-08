@@ -1,5 +1,8 @@
 # Satie Cross-Modal AI Pipeline
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20085603.svg)](https://doi.org/10.5281/zenodo.20085603)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 에릭 사티(1866–1925)의 피아노 작품을 19세기 후반 파리 양식의 시각 예술로 번역합니다.
 
 **기반 논문.** *Sonorous Brushstrokes: A Cross-Modal AI Framework for Translating Erik Satie's Fin-de-Siècle Parisian Solitude into Synaesthetic Visual Art* (`docs/Sonorous_Brushstrokes_v3_EN.docx`)
@@ -75,7 +78,21 @@ data/outputs/    생성 결과 PNG (gitignore)
 
 ## 인용
 
-이 코드를 사용하시면 `CITATION.cff`의 메타데이터로 인용해 주세요. Zenodo로 archive된 release가 있다면 그쪽 DOI를 우선 인용합니다.
+```bibtex
+@software{park_satie_cross_modal_2026,
+  author       = {Park, Eun Ji},
+  title        = {{satie-cross-modal: Cross-Modal AI Pipeline
+                   Translating Erik Satie's Piano Works into
+                   Fin-de-Si\`ecle Parisian Visual Art}},
+  year         = 2026,
+  publisher    = {Zenodo},
+  version      = {v1.0.1},
+  doi          = {10.5281/zenodo.20085603},
+  url          = {https://doi.org/10.5281/zenodo.20085603}
+}
+```
+
+GitHub의 "Cite this repository" 버튼으로도 BibTeX/APA 인용 메타데이터를 받을 수 있습니다 (`CITATION.cff` 기반).
 
 ## 라이선스
 

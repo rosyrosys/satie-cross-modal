@@ -164,9 +164,10 @@ function Build-Html($bilingual) {
             'fig' {
                 # Insert image before caption based on figure number
                 $imgFile = $null
+                # Figure renumbering after removing Gnossienne image:
+                # Fig. 1 = Gymnopedie, Fig. 2 = Vexations (was Fig. 3).
                 if ($block.en -match '^Figure 1\.|^Fig\. 1\.') { $imgFile = 'gymnopedie_1.png' }
-                elseif ($block.en -match '^Figure 2\.|^Fig\. 2\.') { $imgFile = 'gnossienne_1.png' }
-                elseif ($block.en -match '^Figure 3\.|^Fig\. 3\.') { $imgFile = 'vexations.png' }
+                elseif ($block.en -match '^Figure 2\.|^Fig\. 2\.') { $imgFile = 'vexations.png' }
 
                 if ($imgFile) {
                     $imgPath = Join-Path (Join-Path (Split-Path $ScriptDir -Parent) 'site\images') $imgFile
@@ -225,7 +226,7 @@ Copy-Item $EnHtml (Join-Path $DocsDir "$EnFileBase.doc") -Force
 Copy-Item $KoHtml (Join-Path $DocsDir "$KoFileBase.htm") -Force
 Copy-Item $KoHtml (Join-Path $DocsDir "$KoFileBase.doc") -Force
 Write-Output "Saved 4 files to: $DocsDir"
-Write-Output "(Hardlinks should propagate to Desktop\Leonardo\최종제출용\)"
+Write-Output "(Hardlinks should propagate to Desktop\Leonardo_Satie\최종제출용\)"
 
 Write-Output ""
 Write-Output "=== Done ==="

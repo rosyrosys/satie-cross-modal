@@ -20,6 +20,11 @@ authors:
     email: dr.rosyrosys@gmail.com
 repository-code: "https://github.com/rosyrosys/satie-cross-modal"
 url: "https://rosyrosys.github.io/satie-cross-modal/"
+doi: "10.5281/zenodo.20085603"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.20085603"
+    description: "Zenodo concept DOI (resolves to latest version)"
 keywords:
   - cross-modal generation
   - AI art
@@ -32,7 +37,7 @@ keywords:
   - synaesthesia
   - musicology
 license: MIT
-version: 1.0.0
+version: 1.0.1
 date-released: "2026-05-08"
 preferred-citation:
   type: software
@@ -43,5 +48,6 @@ preferred-citation:
       orcid: "https://orcid.org/0000-0001-7699-867X"
       affiliation: "Seoul National University, Department of Musicology"
   year: 2026
-  version: 1.0.0
-  url: "https://github.com/rosyrosys/satie-cross-modal"
+  version: 1.0.1
+  doi: "10.5281/zenodo.20085603"
+  url: "https://doi.org/10.5281/zenodo.20085603"
