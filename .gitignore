@@ -38,6 +38,9 @@ docs/*.doc
 docs/*.htm
 docs/*.html
 docs/*.pdf
+docs/*.png
+docs/*.jpg
+docs/*.jpeg
 
 # Local-only build sources containing full paper text (not for public repo)
 notebooks/v4_revisions.ps1
