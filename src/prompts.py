@@ -17,9 +17,9 @@ PERIOD_ANCHOR = 'fin-de-siecle Parisian Symbolist painting, 1890s'
 # Per-piece subject phrases — visual ideas, editorial choices
 SUBJECT_PHRASES = {
     'gymnopedie_1': (
-        'three veiled hooded figures in profile procession, vast plain marked '
-        'with geometric grid pattern, golden Symbolist sunset, distant obelisk silhouette, '
-        'in the manner of Khnopff and Delville'
+        'a lone man in dark fin-de-siecle coat walking slowly along a quiet country path, '
+        'low horizon, sparse trees, golden silent dawn, contemplative solitude, '
+        'in the manner of Khnopff and Symbolist landscape'
     ),
     'gnossienne_1': (
         'three pale draped figures in solemn procession beside still lakeside, '
@@ -49,8 +49,9 @@ NEGATIVE = (
 
 # Per-piece extra negatives prepended to the global NEGATIVE.
 PIECE_NEGATIVES = {
-    'vexations': 'people, figures, crowd, cafe, conversation, multiple figures, '
-                 'furniture, table, chair, painting on wall, ',
+    'gymnopedie_1': 'multiple figures, three figures, group of people, crowd, procession of figures, ',
+    'vexations':    'people, figures, crowd, cafe, conversation, multiple figures, '
+                    'furniture, table, chair, painting on wall, ',
 }
 
 
