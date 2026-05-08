@@ -21,13 +21,14 @@ SEEDS = {'gymnopedie_1': 1888, 'gnossienne_1': 1890, 'vexations': 1893}
 
 # Per-piece IP-Adapter strength. Higher = stronger reference-image style grounding,
 # but weakens prompt fidelity. Tuned for the current SUBJECT_PHRASES directions:
-# - Gymnopédie aims at Khnopff/Delville drama (sunset+grid+obelisk) — refs are
-#   Puvis-leaning so we keep scale modest, letting prompt drive the new direction.
-# - Gnossienne aims at Puvis 3-figures lakeside — refs match well, allow stronger.
-# - Vexations aims at empty corridor — no refs match, keep low so prompt dominates.
+# - Gymnopédie aims at a single man walking on a country path; refs are figural Symbolist,
+#   keep scale modest so the prompt's solo-walker framing dominates.
+# - Gnossienne aims at a single seated woman in a Symbolist interior; refs include Puvis
+#   pastoral group scenes that conflict with this direction, so scale is lowered.
+# - Vexations aims at infinite empty corridor; no refs match, keep low so prompt dominates.
 PER_PIECE_IP_SCALE = {
-    'gymnopedie_1': 0.40,
-    'gnossienne_1': 0.60,
+    'gymnopedie_1': 0.35,
+    'gnossienne_1': 0.40,
     'vexations':    0.30,
 }
 

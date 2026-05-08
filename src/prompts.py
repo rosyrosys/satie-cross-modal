@@ -17,13 +17,16 @@ PERIOD_ANCHOR = 'fin-de-siecle Parisian Symbolist painting, 1890s'
 # Per-piece subject phrases — visual ideas, editorial choices
 SUBJECT_PHRASES = {
     'gymnopedie_1': (
-        'a lone man in dark fin-de-siecle coat walking slowly along a quiet country path, '
-        'low horizon, sparse trees, golden silent dawn, contemplative solitude, '
-        'in the manner of Khnopff and Symbolist landscape'
+        'a solitary man in long dark fin-de-siecle coat and bowler hat, walking on a '
+        'curving country path, full figure visible at medium-close distance, mid-stride, '
+        'one foot forward, contemplative bowed head, sparse autumn trees, golden silent dawn, '
+        'low horizon, painterly Symbolist landscape, in the manner of Khnopff'
     ),
     'gnossienne_1': (
-        'three pale draped figures in solemn procession beside still lakeside, '
-        'hooded contemplation, earth-tone palette, in the manner of Puvis de Chavannes'
+        'a single young woman in long pale fin-de-siecle dress seated alone by a tall '
+        'arched window, soft afternoon side light falling across her dress, hands resting '
+        'in her lap, reflective downcast gaze, sparse intimate interior, Symbolist '
+        'atmospheric stillness, in the manner of Vuillard and Khnopff interior portraits'
     ),
     'vexations': (
         'endless wood-paneled corridor in fin-de-siecle Parisian interior, '
@@ -49,7 +52,10 @@ NEGATIVE = (
 
 # Per-piece extra negatives prepended to the global NEGATIVE.
 PIECE_NEGATIVES = {
-    'gymnopedie_1': 'multiple figures, three figures, group of people, crowd, procession of figures, ',
+    'gymnopedie_1': 'multiple figures, three figures, group of people, crowd, '
+                    'procession of figures, distant tiny figures, ',
+    'gnossienne_1': 'multiple women, group of figures, three figures, two women, '
+                    'procession, lakeside, outdoor landscape, ',
     'vexations':    'people, figures, crowd, cafe, conversation, multiple figures, '
                     'furniture, table, chair, painting on wall, ',
 }
