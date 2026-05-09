@@ -20,11 +20,15 @@ def load_reference_images(refs_dir: Path, target_size: int = 512) -> dict[str, I
 
 
 # Per-piece reference image groups (filename stems, lowercase)
-# Reassigned to match new SUBJECT_PHRASES directions:
-# - Gymnopédie now targets Khnopff/Delville drama → Symbolist refs (Moreau, Redon, Whistler)
-# - Gnossienne now targets Puvis lakeside → Puvis-heavy refs
-# - Vexations targets empty corridor → minimal refs (Whistler atmosphere only) so
-#   IP-Adapter doesn't smuggle figures back into the empty room.
+# Aligned with the v1.0.1 SUBJECT_PHRASES directions in src/prompts.py:
+# - Gymnopédie targets a solitary man walking on a country path (Khnopff-style
+#   Symbolist landscape) → Moreau, Redon, Whistler refs at scale 0.35.
+# - Gnossienne targets a single seated woman in a Vuillard/Khnopff Symbolist
+#   interior portrait → Puvis (restrained) + Redon at scale 0.40, with negative
+#   prompts against multiple figures and outdoor landscapes.
+# - Vexations targets an empty wood-paneled corridor with deep one-point
+#   perspective → minimal Whistler/Redon refs at scale 0.30 so IP-Adapter
+#   doesn't smuggle figures back into the empty room.
 REF_GROUPS = {
     'gymnopedie_1': ['moreau_galatea', 'redon_closed_eyes', 'whistler_nocturne'],
     'gnossienne_1': ['puvis_sacred_grove', 'puvis_summer', 'redon_closed_eyes'],

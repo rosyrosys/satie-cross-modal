@@ -46,6 +46,7 @@ docs/*.jpeg
 notebooks/v4_revisions.ps1
 notebooks/v4_leonardo_overlay.ps1
 notebooks/build_v4_compressed.ps1
+notebooks/build_v4_compressed_KO.ps1
 notebooks/v3_en_text.txt
 notebooks/v3_ko_text.txt
 

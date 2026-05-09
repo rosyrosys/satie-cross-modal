@@ -5,7 +5,7 @@
 
 에릭 사티(1866–1925)의 피아노 작품을 19세기 후반 파리 양식의 시각 예술로 번역합니다.
 
-**기반 논문.** *Sonorous Brushstrokes: A Cross-Modal AI Framework for Translating Erik Satie's Fin-de-Siècle Parisian Solitude into Synaesthetic Visual Art* (`docs/Sonorous_Brushstrokes_v3_EN.docx`)
+**기반 논문.** *Sonorous Brushstrokes: A Cross-Modal AI Framework for Translating Erik Satie's Fin-de-Siècle Parisian Solitude into Synesthetic Visual Art* (Leonardo, 제출 준비 중, v4 compressed; 본 repo의 v1.0.1 release에 대응)
 
 ## 빠른 시작
 
@@ -72,9 +72,8 @@ data/outputs/    생성 결과 PNG (gitignore)
 
 ## 참고 자료
 
-- 논문 영문판: `docs/Sonorous_Brushstrokes_v3_EN.docx`
-- 논문 한국어판: `docs/Sonorous_Brushstrokes_v3_KO.docx`
 - 사티–발라동 1893 일대기 PDF: `docs/Bonjour_Biqui.pdf`
+- 논문 본문은 출판 전까지 공개되지 않으며, 제출본(v4 compressed)은 저자에게 문의 바랍니다.
 
 ## 인용
 
