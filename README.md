@@ -5,7 +5,7 @@
 
 에릭 사티(1866–1925)의 피아노 작품을 19세기 후반 파리 양식의 시각 예술로 번역합니다.
 
-**기반 논문.** *Sonorous Brushstrokes: A Cross-Modal AI Framework for Translating Erik Satie's Fin-de-Siècle Parisian Solitude into Synesthetic Visual Art* (Leonardo, 제출 준비 중, v4 compressed; 본 repo의 v1.0.1 release에 대응)
+**기반 논문.** *Sonorous Brushstrokes: Biographically Anchored AI Translations of Erik Satie's Piano Works* (Leonardo, 제출 준비 중, v4 compressed; 본 repo의 v1.0.1 release에 대응)
 
 ## 빠른 시작
 
@@ -80,9 +80,8 @@ data/outputs/    생성 결과 PNG (gitignore)
 ```bibtex
 @software{park_satie_cross_modal_2026,
   author       = {Park, Eun Ji},
-  title        = {{satie-cross-modal: Cross-Modal AI Pipeline
-                   Translating Erik Satie's Piano Works into
-                   Fin-de-Si\`ecle Parisian Visual Art}},
+  title        = {{satie-cross-modal: Biographically Anchored
+                   AI Translations of Erik Satie's Piano Works}},
   year         = 2026,
   publisher    = {Zenodo},
   version      = {v1.0.1},

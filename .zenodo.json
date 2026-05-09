@@ -1,5 +1,5 @@
 {
-  "title": "satie-cross-modal: Cross-Modal AI Pipeline Translating Erik Satie's Piano Works into Fin-de-Siècle Parisian Visual Art",
+  "title": "satie-cross-modal: Biographically Anchored AI Translations of Erik Satie's Piano Works",
   "description": "<p>A cross-modal AI framework that translates piano works by Erik Satie into period-faithful visual artworks. Combines CLAP audio embeddings, low-level acoustic descriptors via librosa, a handcrafted lexical bridge over four perceptual dimensions (palette, rhythm, surface, mood), and Stable Diffusion XL with IP-Adapter conditioned on curated fin-de-siècle Parisian visual references. Each piece is anchored to an editorial biographical phrase that situates the score within a moment of the composer's life. Released as the computational companion to the paper <em>Sonorous Brushstrokes</em>.</p>",
   "creators": [
     {

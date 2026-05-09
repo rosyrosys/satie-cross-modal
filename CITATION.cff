@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it using these metadata."
-title: "satie-cross-modal: Cross-Modal AI Pipeline Translating Erik Satie's Piano Works into Fin-de-Siècle Parisian Visual Art"
+title: "satie-cross-modal: Biographically Anchored AI Translations of Erik Satie's Piano Works"
 abstract: >-
   A cross-modal AI framework that translates piano works by Erik Satie into
   period-faithful visual artworks. Combines CLAP audio embeddings, low-level
@@ -41,7 +41,7 @@ version: 1.0.1
 date-released: "2026-05-08"
 preferred-citation:
   type: software
-  title: "satie-cross-modal: Cross-Modal AI Pipeline Translating Erik Satie's Piano Works into Fin-de-Siècle Parisian Visual Art"
+  title: "satie-cross-modal: Biographically Anchored AI Translations of Erik Satie's Piano Works"
   authors:
     - family-names: Park
       given-names: Eun Ji
